@@ -35,7 +35,7 @@ console.log(day)를 return하게 되어 smilmingDays에 들어가게 됩니다
 
 
 
-
+numbers의 제곱값으로 새로운 배열 만들기
 
 ```javascript
 // 1
@@ -55,12 +55,12 @@ console.log(newNumbers);
 
 ```javascript
 //3
-var numbers = [ 1,2,3,4,5,6,7,8,9];
+let numbers = [ 1,2,3,4,5,6,7,8,9];
 
 function multiplyTwo(number){
     return number *2;
 }
-var newNumbers = numbers.map(multiplyTwo);
+let newNumbers = numbers.map(multiplyTwo);
 console.log(newNumbers);
 ```
 
@@ -73,7 +73,45 @@ console.log(newNumbers);
 
 ### filter
 
-조건문을 만족한 요소를 반환
+조건을 만족한 요소를 반환
+
+```javascript
+let newArray = arr.filter(callbackFunction(element, index, array), thisArg);
+```
 
 
+
+numbers에서 3이상의 값으로 새로운 배열 만들기
+
+```javascript
+//1
+let numbers = [ 1,2,3,4,5,6,7,8,9];
+let resultNumbers = numbers.filter(number => number >= 3);
+console.log(resultNumbers);
+```
+
+```javascript
+//2
+let numbers = [ 1,2,3,4,5,6,7,8,9];
+let newNumbers = numbers.filter(function(number){
+  return number>=3; 
+});
+console.log(newNumbers);
+```
+
+```javascript
+//3
+let numbers = [ 1,2,3,4,5,6,7,8,9];
+
+function three(number){
+    return number >= 3;
+}
+let resultNumbers = numbers.filter(three);
+console.log(resultNumbers);
+```
+
+```javascript
+//결과
+[3, 4, 5, 6, 7, 8, 9]
+```
 
